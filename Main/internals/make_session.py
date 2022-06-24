@@ -58,7 +58,7 @@ async def add_session_cb_handler(_, cb: CallbackQuery):
             api_id=Altruix.config.API_ID, api_hash=Altruix.config.API_HASH
         )
     except Exception as err:
-        await process_msg.reply("Something went wrong!\n{}".format(err))
+        await process_msg.reply(f"Something went wrong!\n{err}")
         await process_msg.delete()
         return
     try:
@@ -109,7 +109,7 @@ async def add_session_cb_handler(_, cb: CallbackQuery):
         try:
             await app.check_password(ans.text)
         except Exception as err:
-            await ans.reply("Something went wrong!\n{}".format(err))
+            await ans.reply(f"Something went wrong!\n{err}")
             return
     except PhoneCodeInvalid:
         await ans.reply("The code you sent seems Invalid, Try again.")

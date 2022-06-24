@@ -43,7 +43,7 @@ class Paste:
             data = resp.json()
 
             return "nekobin", f"https://nekobin.com/{data['result']['key']}"
-        except (JSONDecodeError, KeyError, TypeError, TimeoutError):
+        except (KeyError, TypeError, TimeoutError):
             return None, None
 
     async def to_spacebin(self) -> Set[Union[str, None]]:
@@ -53,7 +53,7 @@ class Paste:
         try:
             data = r.json()
             return "spacebin", f'https://spaceb.in/{data["payload"]["id"]}'
-        except (JSONDecodeError, KeyError, TypeError, TimeoutError):
+        except (KeyError, TypeError, TimeoutError):
             return None, None
 
     async def to_hastebin(self) -> Set[Union[str, None]]:
@@ -61,7 +61,7 @@ class Paste:
         try:
             data = r.json()
             return "hastebin", f'https://hastebin.com/{data["key"]}'
-        except (JSONDecodeError, KeyError, TypeError, TimeoutError):
+        except (KeyError, TypeError, TimeoutError):
             return None, None
 
     async def paste(self) -> Set[Union[str, None]]:
