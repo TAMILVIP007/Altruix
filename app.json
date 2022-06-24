@@ -1,0 +1,82 @@
+{
+    "name": "AltruiX UserBot",
+    "description": "Pyrogram based userbot.",
+    "logo": "https://raw.githubusercontent.com/Altruix/Altruix/main/Main/assets/images/logo.jpg?token=GHSAT0AAAAAABSMMVBTE6TMRQ3V63JYUI5GYSG4I6Q",
+    "keyword": ["altruix"],
+    "repository": "https://github.com/Altruix/Altruix",
+    "website": "https://altruix.tech",
+    "success_url": "container",
+    "env": {
+        "ALIVE_IMG": {
+            "description": "Userbot's alive image.",
+            "value": "",
+            "required": false
+        },
+        "API_ID": {
+            "description": "Your API_ID.",
+            "value": "",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "API_HASH",
+            "value": "",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your bot token.",
+            "value": "",
+            "required": false
+        },
+        "CMD_HANDLER": {
+            "description": "Userbot's command handler.",
+            "value": ".",
+            "required": true
+        },
+        "DBI_URI": {
+            "description": "Database authorization URL.",
+            "value": "",
+            "required": true
+        },
+        "LOG_CHAT_ID": {
+            "description": "Log group's ID.",
+            "value": "",
+            "required": false
+        },
+        "OWNER_ID": {
+            "description": "Your telegram user ID.",
+            "value": "",
+            "required": true
+        },
+        "PLUGIN_CHANNELS": {
+            "description": "Plugin channel ID's seperated by [SPACE].",
+            "value": "",
+            "required": false
+        },
+        "SESSIONS": {
+            "description": "Pyrogram string sessions seperated by [SPACE].",
+            "value": "",
+            "required": false
+        },
+        "SUDO_CMD_HANDLER": {
+            "description": "Sudo command handler.",
+            "value": "!",
+            "required": true
+        },
+        "SUDO_USER": {
+            "description": "Telegram user ID of sudo users seperated by [SPACE].",
+            "value": "",
+            "required": false
+        },
+        "UB_LANG": {
+            "description": "Userbot's language.",
+            "value": "english",
+            "required": true
+        }
+    },
+    "formation": {
+        "altruix": {
+            "quantity": 1,
+            "size":"free"
+        }
+    } 
+}
