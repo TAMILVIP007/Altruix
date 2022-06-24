@@ -70,7 +70,7 @@ def decode_file_id(file_id):
 
 async def getstickerfromcollection(name_: str):
     try:
-        return await Altruix.bot.send(
+        return await Altruix.bot.invoke(
             raw.functions.messages.GetStickerSet(
                 stickerset=raw.types.InputStickerSetShortName(short_name=name_),
                 hash=0,
@@ -189,7 +189,7 @@ async def kang_fun(c: Client, m: Union[Message, Rmessage]):
         title += f"Pack Vol {pack_}"
         stick_ = await getstickerfromcollection(pack_m)
         if not stick_:
-            stick_ = await Altruix.bot.send(
+            stick_ = await Altruix.bot.invoke(
                 raw.functions.stickers.CreateStickerSet(
                     user_id=peer_,
                     title=title,
@@ -205,7 +205,7 @@ async def kang_fun(c: Client, m: Union[Message, Rmessage]):
             await msg.edit_msg("MAX_STICKER_DONE", string_args=(title, pack_ + 1))
             continue
         else:
-            await Altruix.bot.send(
+            await Altruix.bot.invoke(
                 raw.functions.stickers.AddStickerToSet(
                     stickerset=raw.types.InputStickerSetShortName(
                         short_name=stick_.set.short_name

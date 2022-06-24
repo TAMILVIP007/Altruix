@@ -44,7 +44,7 @@ async def ping_ub_cmd(c: Client, m: Message):
             await m.delete_if_self()
         except ChatSendInlineForbidden:
             start = time.perf_counter()
-            await c.send(Ping(ping_id=9999999))
+            await c.invoke(Ping(ping_id=9999999))
             uptime = Essentials.get_readable_time(time.time() - Altruix.start_time)
             end = time.perf_counter()
             ms = round((end - start) * 1000, 2)
@@ -55,7 +55,7 @@ async def ping_ub_cmd(c: Client, m: Message):
 
     else:
         start = time.perf_counter()
-        await c.send(Ping(ping_id=9999999))
+        await c.invoke(Ping(ping_id=9999999))
         uptime = Essentials.get_readable_time(time.time() - Altruix.start_time)
         end = time.perf_counter()
         ms = round((end - start) * 1000, 2)

@@ -55,9 +55,8 @@ async def set(c: Client, m: Message):
     elif "-u" in args:
         if not m.user_input:
             return await msg.edit("INPUT_REQUIRED")
-
         uname = m.text.split(None, 2)[2].replace("@", "")
-        check = await c.send(CheckUsername(username=uname))
+        check = await c.invoke(CheckUsername(username=uname))
         if not check:
             return await m.handle_message(
                 Altruix.get_string("USERNAME_TAKEN").format(f"@{uname}")

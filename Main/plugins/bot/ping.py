@@ -24,7 +24,7 @@ from pyrogram.types import (
 )
 async def restart_command_handler(c: Client, m: Message):
     start = time.perf_counter()
-    await c.send(Ping(ping_id=9999999))
+    await c.invoke(Ping(ping_id=9999999))
     uptime = Essentials.get_readable_time(time.time() - Altruix.start_time)
     end = time.perf_counter()
     ms = round((end - start) * 1000, 2)
@@ -42,7 +42,7 @@ async def restart_command_handler(c: Client, m: Message):
 async def ping_cb_handler(c: Client, cb: CallbackQuery):
     uptime = Essentials.get_readable_time(time.time() - Altruix.start_time)
     start = time.perf_counter()
-    await c.send(Ping(ping_id=9999999))
+    await c.invoke(Ping(ping_id=9999999))
     end = time.perf_counter()
     ms = round((end - start) * 1000, 2)
     text = Altruix.get_string("PING_TEXT").format(
@@ -64,7 +64,7 @@ async def ping_cb_handler(c: Client, cb: CallbackQuery):
 async def ping_inline_handler(c: Client, iq: InlineQuery):
     uptime = Essentials.get_readable_time(time.time() - Altruix.start_time)
     start = time.perf_counter()
-    await c.send(Ping(ping_id=9999999))
+    await c.invoke(Ping(ping_id=9999999))
     end = time.perf_counter()
     ms = round((end - start) * 1000, 2)
     await iq.answer(

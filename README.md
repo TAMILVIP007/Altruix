@@ -5,7 +5,6 @@
 <br>
 
 # Deploying To Different Platforms
-> - For deploying to [Heroku](#Deploy-To-Heroku)  
 > - For deploying [Locally](#Deploy-Locally)
 
 <br>
@@ -29,7 +28,7 @@ If you want to Deploy your AltruiX UserBot on your PC or in Termux these are the
 > bash start.sh
 > ```
 
-Example of [.env](#env)
+Example of [`.env`](#env)
 
 <br>
 
