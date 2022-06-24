@@ -18,16 +18,6 @@
 
 <br>
 
-## Deploy to Heroku
-
-If you want to Deploy AltruiX on Heroku these are steps -
-> - Go to [Heroku](https://heroku.com) and create an account  
-> - Get all required [Variables](#Required-Variables) before going to next step  
->  Now when you have your Variables click the below button and Enter the VARs asked in the options  
-> [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AltruiX/Altruix)
-
-<br>
-
 ## Deploy Locally
 
 If you want to Deploy your AltruiX UserBot on your PC or in Termux these are the steps -
